@@ -130,13 +130,13 @@ describe('vue-infinite-loading:component', () => {
     vm.$mount('#app');
   });
 
-  it('should not trigger load again before the last load is complete\n      (use div as the container and spiral spinner)', (done) => {
+  it('should not trigger load again before the last load is complete', (done) => {
     vm = new Vue(Object.assign({}, basicConfig, {
       data: {
         list: [],
         isDivScroll: true,
         direction: 'bottom',
-        spinner: 'spiral',
+        spinner: 'default',
       },
       methods: {
         infiniteHandler: function infiniteHandler() {
@@ -161,7 +161,7 @@ describe('vue-infinite-loading:component', () => {
     vm.$mount('#app');
   });
 
-  it('should works again when reset it after a completion\n      (use top direction and bubbles spinner)', (done) => {
+  it('should works again when reset it after a completion', (done) => {
     let calledTimes = 0;
 
     vm = new Vue(Object.assign({}, basicConfig, {
@@ -169,7 +169,7 @@ describe('vue-infinite-loading:component', () => {
         list: [],
         isDivScroll: false,
         direction: 'top',
-        spinner: 'bubbles',
+        spinner: 'default',
       },
       methods: {
         infiniteHandler: function infiniteHandler($state) {
@@ -186,7 +186,7 @@ describe('vue-infinite-loading:component', () => {
             });
           } else if (calledTimes === 2) {
             // check spinner
-            expect(isShow(this.$el.querySelector('.loading-bubbles'))).to.be.true;
+            expect(isShow(this.$el.querySelector('.loading-default'))).to.be.true;
             done();
           }
         },
@@ -196,7 +196,7 @@ describe('vue-infinite-loading:component', () => {
     vm.$mount('#app');
   });
 
-  it('should always load data until fill up the container\n      (use div as the container and circles spinner)', (done) => {
+  it('should always load data until fill up the container', (done) => {
     let timer;
 
     vm = new Vue(Object.assign({}, basicConfig, {
@@ -204,7 +204,7 @@ describe('vue-infinite-loading:component', () => {
         list: [],
         isDivScroll: true,
         direction: 'bottom',
-        spinner: 'circles',
+        spinner: 'default',
       },
       methods: {
         infiniteHandler: function infiniteHandler($state) {
@@ -366,13 +366,13 @@ describe('vue-infinite-loading:component', () => {
     vm.$mount('#app');
   });
 
-  it('should throttle properly for the scroll event handler\n      (use div as the container and wave dots spinner)', (done) => {
+  it('should throttle properly for the scroll event handler', (done) => {
     vm = new Vue(Object.assign({}, basicConfig, {
       data: {
         list: [...new Array(20).join('1').split('')],
         isDivScroll: true,
         direction: 'bottom',
-        spinner: 'waveDots',
+        spinner: 'default',
       },
       mounted: function mounted() {
         const { scrollParent } = this.$refs.infiniteLoading;
