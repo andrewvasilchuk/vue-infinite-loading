@@ -5,7 +5,7 @@
 
 import Vue, { VNode, Component, PluginFunction } from 'vue';
 
-export type SpinnerType = 'default' | 'bubbles' | 'circles' | 'spiral' | 'waveDots';
+export type SpinnerType = 'default';
 export type DirectionType = 'top' | 'bottom';
 
 export interface Slots {
@@ -64,7 +64,7 @@ export default class InfiniteLoading extends Vue {
 
   // Slots
   $slots: Slots;
-  
+
   static install: PluginFunction<never>;
 }
 

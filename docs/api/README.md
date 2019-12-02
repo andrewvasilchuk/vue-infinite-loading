@@ -22,7 +22,7 @@ The `infinite` event will be fired if the scroll distance is less than this valu
 
 - Type: `String`
 - Default: `default`
-- Available: `default` | `spiral` | `circles` | `bubbles` | `waveDots`
+- Available: `default`
 - Details: 
 
 This property is used to set the loading animation, you can choose one from the internal spinners that you like, you can also customize it with a [named slot](#spinner-2) that called `spinner`.

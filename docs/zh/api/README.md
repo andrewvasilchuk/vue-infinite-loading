@@ -22,7 +22,7 @@ sidebar: auto
 
 - 类型：`String`
 - 默认值：`default`
-- 有效值：`default` | `spiral` | `circles` | `bubbles` | `waveDots`
+- 有效值：`default`
 - 详细：
 
 此选项用于设置加载动画，你可以从内置选项中选择一个你喜欢的，你也可以通过名为 `spinner` 的[具名插槽](#spinner-2)来进行自定义。

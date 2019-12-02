@@ -11,7 +11,7 @@ This component provides four different slots that you can use to display differe
 Only the `spinner` slot can be configured via the prop, and the set value can only be the built-in spinner type:
 
 ``` html
-<infinite-loading spinner="spiral"></infinite-loading>
+<infinite-loading></infinite-loading>
 ```
 
 You can preview all built-in spinner types on the right. Please use other ways if you want to create your own spinner.
