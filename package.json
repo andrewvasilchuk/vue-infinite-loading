@@ -119,7 +119,10 @@
     "extends": [
       "airbnb-base",
       "plugin:vue/essential"
-    ]
+    ],
+    "rules": {
+      "linebreak-style": 0
+    }
   },
   "eslintIgnore": [
     "dist",
